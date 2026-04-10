@@ -1,0 +1,47 @@
+{
+  "name": "pacifica-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the Pacifica perpetuals exchange — REST, WebSocket, and on-chain deposit",
+  "author": "pacifica-fi",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "example": "tsx",
+    "test": "vitest run tests/signing.test.ts",
+    "test:integration": "vitest run tests/integration.test.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.95.8",
+    "@vitest/ui": "^4.1.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.4.1",
+    "tweetnacl": "^1.0.3",
+    "uuid": "^11.1.0",
+    "vitest": "^4.1.4",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.14",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
